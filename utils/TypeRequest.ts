@@ -2,7 +2,7 @@
  * @Description: Request
  * @Author: Sam
  * @Date: 2021-08-17 00:09:47
- * @LastEditTime: 2022-06-14 11:03:56
+ * @LastEditTime: 2022-06-14 11:12:47
  * @LastEditors: Sam
  */
 
@@ -10,11 +10,8 @@ import Axios, { CancelTokenSource } from 'axios';
 import qs from 'qs';
 import { message } from 'antd';
 import { getDvaApp } from 'umi';
-import { Config } from '@/config/Config';
-import { Utils } from './Utils';
 import { KVObject } from '../commons';
 Axios.defaults.timeout = 30000;
-Axios.defaults.baseURL = Config.BIM_API;
 Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 const CancelToken = Axios.CancelToken;
 
