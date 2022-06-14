@@ -1,0 +1,225 @@
+/*
+ * @Description:tree styles
+ * @Author: SZEWEC
+ * @Date: 2022-02-18 18:31:14
+ * @LastEditTime: 2022-03-07 10:18:30
+ * @LastEditors: Sam
+ */
+@import '../../../common/styles/colors.less';
+.tree {
+    height: 100%;
+    overflow: auto;
+    &-node {
+        &-operation {
+            padding: 0;
+            a {
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #999;
+            }
+        }
+    }
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 48px;
+        padding-right: 5px;
+        color: #999;
+
+        &-text {
+            flex: auto;
+            width: max-content;
+            &-btns {
+                width: 48px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                &-btn {
+                    padding: 0 5px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        :global {
+            .anticon {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+    }
+    &-leaf {
+        color: #333;
+    }
+    :global {
+        .ant-tree {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            user-select: none;
+
+            // 定义滚动条高宽及背景，高宽分别对应横竖滚动条的尺寸
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+                background-color: transparent;
+            }
+
+            // 定义滚动条轨道 内阴影+圆角
+            &::-webkit-scrollbar-track {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            // 定义滑块 内阴影+圆角
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: @color-scrollbar-thumb;
+            }
+            // 定义右下角转角
+            &::-webkit-scrollbar-corner {
+                background-color: transparent;
+            }
+
+            .ant-tree-treenode {
+                width: 100%;
+            }
+            .ant-tree-node-content-wrapper {
+                width: 100%;
+            }
+
+            .ant-tree-list-holder-inner {
+                min-width: max-content;
+                max-height: max-content;
+
+                .ant-tree-treenode-selected {
+                    color: @color-font-blue;
+                    background: @color-header-grey;
+
+                    .ant-tree-node-content-wrapper {
+                        background: transparent;
+                        .node-title-wrapper {
+                            color: @color-font-blue;
+                        }
+                    }
+                }
+
+                .ant-tree-treenode:hover {
+                    background: @color-header-grey;
+                    .ant-tree-node-content-wrapper {
+                        background: transparent;
+                        .node-title-wrapper {
+                            color: @color-font-blue;
+                        }
+                    }
+
+                    // 悬浮时显示操作按钮
+                    .node-title-buttons-wrapper {
+                       .node-title-buttons {
+                           display: flex;
+                           align-items: center;
+                       }
+                    }
+                }
+
+                .ant-tree-node-content-wrapper {
+                    padding: 0;
+                }
+
+                .ant-tree-switcher {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 2px;
+                }
+
+                .ant-tree-switcher_open .ant-tree-switcher-icon svg {
+                    transform: rotate(-180deg);
+                }
+
+                .ant-tree-switcher_close .ant-tree-switcher-icon svg {
+                    transform: rotate(0deg);
+                }
+            }
+
+            // 树的缩进单位
+            .ant-tree-indent-unit {
+                width: 12px;
+            }
+        }
+
+        .node-title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+
+            &.not-leaf {
+                color: @color-font-grey;
+            }
+
+            .node-title-text {
+                flex: auto;
+                width: max-content;
+            }
+
+            .node-title-buttons-wrapper {
+                width: 48px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .node-title-buttons {
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .ant-tree-switcher {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2px;
+            :global {
+                .anticon {
+                    color: #999 !important;
+                }
+            }
+        }
+        .ant-tree-checkbox {
+            margin: 16px 8px 0 0;
+        }
+    }
+    &-popover {
+        padding: 0 !important;
+        :global {
+            .ant-popover-inner-content {
+                padding: 0 !important;
+                a {
+                    padding: 0 20px;
+                    &:hover {
+                        background: #00000015;
+                    }
+                }
+            }
+            .ant-popover-arrow {
+                display: none;
+            }
+        }
+        &-buttons{
+            width:68px;
+            a{
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #999;
+            }
+        }
+    }
+}

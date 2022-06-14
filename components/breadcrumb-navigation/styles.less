@@ -1,0 +1,37 @@
+@import '../../../common/styles/index';
+
+.breadcrumb-navigation {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    &-left-icon{
+        margin-right: 5px;
+    }
+    .text-header-breadcrumb {
+        color: @color-font-grey;
+    }
+    .text-header-breadcrumb-with-link {
+        color:@color-font-default;
+        &:hover{
+            color:@color-primary-blue;
+            cursor: pointer;
+        }
+    }
+    .anticon {
+        color: #999999;
+    }
+
+    &.gis-viewer-dark {
+        background: @color-background-dark;
+
+        .anticon {
+            color: @color-font-white;
+        }
+        .text-header-breadcrumb {
+            color: @color-font-white;
+        }
+        .ant-breadcrumb-separator {
+            color: @color-font-white;
+        }
+    }
+}

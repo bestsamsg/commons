@@ -1,0 +1,31 @@
+/*
+ * @Description: styles
+ * @Author: SZEWEC
+ * @Date: 2021-09-13 17:17:19
+ * @LastEditTime: 2022-03-05 17:49:22
+ * @LastEditors: Sam
+ */
+
+.search-form{
+    background: #fff;
+    &-item{
+        display: inline-block;
+        margin-left:10px;
+        &:nth-of-type(1){
+            margin-left:0;
+        }
+        :global{
+            .ant-form-item{
+                margin-bottom:10px;
+            }
+        }
+    }
+    &-buttons{
+        margin-left:10px;
+        display: inline-block;
+        vertical-align: top;
+        button{
+            margin-left:10px;
+        }
+    }
+}
