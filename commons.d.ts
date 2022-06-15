@@ -2,7 +2,7 @@
  * @Description:commons declare
  * @Author: SZEWEC
  * @Date: 2021-09-16 15:11:58
- * @LastEditTime: 2022-06-14 10:58:41
+ * @LastEditTime: 2022-06-15 17:24:44
  * @LastEditors: Sam
  */
 
@@ -131,5 +131,4 @@ declare interface DvaModelProps<S> extends Omit<Model, 'reducers'|'effects'>{
 		setState:(state:S, action:{type:string, payload:Partial<S>})=>S;
 	};
 
-	[key:string]:any;
 }
