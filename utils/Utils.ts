@@ -7,11 +7,21 @@
  */
 import { getDvaApp } from 'umi';
 import { AnyAction, BaseTreeNodeProps, KVObject, StoreStateProps } from '../commons';
+import classnames from 'classnames';
 
 /**
  * 工具类
  */
 export namespace Utils {
+
+
+	/**
+	 * 创建class
+	 * @param obj 
+	 */
+	export const makeClasses = (obj:{[key:string]:boolean})=>{
+		return classnames(obj);
+	}
 
     /**动态宽度计算 */
     const textDiv = document.createElement('span');
